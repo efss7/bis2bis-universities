@@ -3,13 +3,12 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
   Query,
   Res,
-  HttpCode,
   HttpStatus,
+  Put,
 } from '@nestjs/common';
 import { UniversitiesService } from './universities.service';
 import { CreateUniversityDto } from './dto/create-university.dto';
@@ -44,7 +43,7 @@ export class UniversitiesController {
     return this.universityService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   async update(
     @Param('id') id: string,
     @Body() updateUniversityDto: UpdateUniversityDto,

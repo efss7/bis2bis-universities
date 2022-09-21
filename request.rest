@@ -1,5 +1,5 @@
 ### create University
-POST http://localhost:3000/universities
+POST http://localhost:3000/
 Content-Type: application/json
 
 {
@@ -18,16 +18,14 @@ GET  http://localhost:3000/universities
 GET  http://localhost:3000/universities/s?country=Brazil&page=12
 
 ### get by id
-GET  http://localhost:3000/universities/6329f9f101383530102a0c64
+GET  http://localhost:3000/universities/632b7c750ad20e01a43420ef
 
 ### edit by id
-PATCH http://localhost:3000/universities/6329f9f101383530102a0644
+PUT  http://localhost:3000/universities/632b7c750ad20e01a43420ef
 Content-Type: application/json
 
 {
     "domains": ["teste"], 
-    "alpha_two_code": "pe", 
-    "country": "ue", 
     "web_pages": ["http://www.teste.com"], 
     "name": "Insituto Universitario do teste"
 }

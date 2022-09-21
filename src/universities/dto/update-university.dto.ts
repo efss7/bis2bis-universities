@@ -17,17 +17,5 @@ export class UpdateUniversityDto extends PartialType(CreateUniversityDto) {
 
   @IsString()
   @IsNotEmpty()
-  alpha_two_code: string;
-
-  @IsString()
-  @IsNotEmpty()
   name: string;
-
-  @IsString()
-  @IsNotEmpty()
-  country: string;
-
-  @IsString()
-  @IsNotEmpty()
-  'state-province'?: string;
 }
