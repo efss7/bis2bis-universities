@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.countries = exports.universityModel = void 0;
+exports.countries = exports.universityModel = exports.UniversityDto = void 0;
 var axios_1 = require("axios");
 var dotenv_1 = require("dotenv");
 var mongoose_1 = require("mongoose");
@@ -47,6 +47,7 @@ var UniversityDto = /** @class */ (function () {
     }
     return UniversityDto;
 }());
+exports.UniversityDto = UniversityDto;
 var UniversitySchema = new mongoose_1["default"].Schema({
     domains: [String],
     alpha_two_code: {

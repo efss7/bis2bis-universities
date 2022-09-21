@@ -1,0 +1,36 @@
+### create University
+POST http://localhost:3000/universities
+Content-Type: application/json
+
+{
+    "domains": ["batafrita"], 
+    "alpha_two_code": "bf", 
+    "country": "Irlanta", 
+    "web_pages": ["http://www.rapadura.com"], 
+    "name": "Republica tcheca da batata",
+    "state-province": "Munster"
+}
+
+### get all
+GET  http://localhost:3000/universities
+
+### get by page
+GET  http://localhost:3000/universities/s?country=Brazil&page=12
+
+### get by id
+GET  http://localhost:3000/universities/6329f9f101383530102a0c64
+
+### edit by id
+PATCH http://localhost:3000/universities/6329f9f101383530102a0644
+Content-Type: application/json
+
+{
+    "domains": ["teste"], 
+    "alpha_two_code": "pe", 
+    "country": "ue", 
+    "web_pages": ["http://www.teste.com"], 
+    "name": "Insituto Universitario do teste"
+}
+
+### get by id
+DELETE http://localhost:3000/universities/6329f9f101383530102a0636

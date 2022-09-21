@@ -6,7 +6,7 @@ config();
 
 main().catch((err) => console.log(err));
 
-class UniversityDto {
+export class UniversityDto {
   domains: string[];
   web_pages: string[];
   alpha_two_code: string;
