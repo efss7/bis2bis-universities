@@ -1,73 +1,75 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+<p id="voltar">
+<a href="#sobre">Sobre</a> |
+<a href="#tecnologias">Tecnologias</a> |
+<a href="#documentação">Documentação</a> |
+<a href="#features">Features</a> |
+<a href="#back">Rodando o back-end</a> |
+<a href="#desenvolvedor">Desenvolvedor</a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h1 id="sobre">📕 Projeto Bis2bis-Universities</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Uma API REST para uma plataforma de registro de Universidades. Nessa API, podemos visualizar, cadastrar, editar e deletar universidades.A API foi desenvolvida utilizado as tecnologias **TYPESCRIPT, NODE.JS, NEST.JS EXPRESS.JS, MONGODB** como banco de dados **SWAGGER** para a documentação. Além disso, o projeto foi estruturado utilizando **PROGRAMAÇÃO ORIENTADA A OBJETOS(POO)** e princípios **S.O.L.I.D.**
 
-## Description
+<h2 id="tecnologias">🛠 Tecnologias</h2>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [TypeScript](https://www.typescriptlang.org/)
+- [NodeJS](https://nodejs.org/en/docs/)
+- [NestJS](https://docs.nestjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Swagger](https://swagger.io/)
 
-## Installation
+<h2 id="documentação">📃 Documentação no Swagger</h2>
 
-```bash
-$ npm install
+- Para visualizar a documentação é necessário clonar o projeto na sua maquina e rodar o seguinte comando: ```npm run start:dev``` depois de confirmar que o projeto está rodando é só clicar no link abaixo ↙
+- [Swagger](http://localhost:3000/api)
+
+<h2 id="features">✔️ Features</h2>
+
+🎓 Universidades
+
+- [x] Visualizar todas as universidades cadastradas
+- [x] Visualizar universidades por país e página
+- [x] Visualizar uma universidade específica
+- [x] Criar uma nova universidade
+- [x] Editar uma universidade já criada
+- [x] Deletar universidade
+
+<h2 id="back"> 🎲 Rodando o Back End (servidor)</h2>
+
+### Pré-Requisitos
+
+- Para rodar o projeto você vai precisar do [Node.JS](https://nodejs.org/en/download/)
+- Uma instancia de um banco de dados [MongoDB](https://www.mongodb.com/)
+- Um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### Como instalar e Rodar
+* Para baixar o projeto
 ```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+1. git clone https://github.com/efss7/bis2bis-universities.git
+2. cd bis2bis-universities
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+* Para instalar e rodar o projeto
 ```
+3. npm install
+4. npm run start:dev
+    ou
+3. yarn install
+4. yarn run start:dev
+```
+* Para popular/despopular o banco de dados com as universidades
+```
+5. npm run populate
+6. npm run unpopulated
+    ou
+5. yarn run populate
+6. yarn run unpopulated
+```
+Renomeie o arquivo ```.env.example```  para ```.env``` e preencha as variáveis com seus dados do banco de dados MongoDB. É muito importante para a execução do servidor.
 
-## Support
+<h2 id="desenvolvedor">👨‍💻 Desenvolvedor</h2>
+<table>
+<td><a href="https://github.com/efss7"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/99001809?v=4" width="100px;" alt="Imagem profile Eric Silva desenvolvedor"/><br /><sub><b>Eric Silva </b></sub></a><br />
+</table>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<a href="#voltar">Voltar para o topo ⬆️</a>
