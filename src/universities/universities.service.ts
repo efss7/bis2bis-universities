@@ -14,28 +14,13 @@ export class UniversitiesService {
 
   private limit = 20;
 
-  async create(createUniversityDto: CreateUniversityDto) {
-    const findUniversity = await this.universityModel.findOne({
-      country: createUniversityDto.country,
-      'state-province': createUniversityDto['state-province'],
-      name: createUniversityDto.name,
-    });
-    if (findUniversity) {
-      throw new ConflictException(
-        'Já existe uma universidade cadastrada com esses valores',
-      );
-    }
-    const university = new this.universityModel(createUniversityDto);
-    return university.save();
-  }
-
   async findAll() {
     return this.refactor(
       await this.universityModel.find({}, 'name country state-province'),
     );
   }
 
-  async find(country: string, page: number) {
+  async findByCountryAndPage(country: string, page: number) {
     return this.refactor(
       await this.universityModel
         .find({ country }, 'name country state-province')
@@ -54,6 +39,20 @@ export class UniversitiesService {
       nome: result.name,
       estado: result['state-province'],
     };
+  }
+  async create(createUniversityDto: CreateUniversityDto) {
+    const findUniversity = await this.universityModel.findOne({
+      country: createUniversityDto.country,
+      'state-province': createUniversityDto['state-province'],
+      name: createUniversityDto.name,
+    });
+    if (findUniversity) {
+      throw new ConflictException(
+        'Já existe uma universidade cadastrada com esses valores',
+      );
+    }
+    const university = new this.universityModel(createUniversityDto);
+    return university.save();
   }
 
   async update(id: string, updateUniversityDto: UpdateUniversityDto) {

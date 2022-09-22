@@ -14,7 +14,8 @@ import { UniversitiesService } from './universities.service';
 import { CreateUniversityDto } from './dto/create-university.dto';
 import { UpdateUniversityDto } from './dto/update-university.dto';
 import { Response } from 'express';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('Universities')
 @Controller('universities')
 export class UniversitiesController {
   constructor(private readonly universityService: UniversitiesService) {}
@@ -35,7 +36,7 @@ export class UniversitiesController {
 
   @Get('s')
   find(@Query('country') country: string, @Query('page') page: string) {
-    return this.universityService.find(country, +page);
+    return this.universityService.findByCountryAndPage(country, +page);
   }
 
   @Get(':id')
